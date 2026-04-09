@@ -70,14 +70,20 @@ class MainActivity : AppCompatActivity() {
         // 🔽 Barra inferior
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
 
+        bottomNav.selectedItemId = R.id.nav_progreso
+
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.nav_home -> {
-                    Toast.makeText(this, "Inicio", Toast.LENGTH_SHORT).show()
+
+                R.id.nav_progreso -> {
+                    true // ya estás en esta pantalla
                 }
+
                 R.id.nav_stats -> {
-                    Toast.makeText(this, "Progreso", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, StatsActivity::class.java))
+                    finish()
                 }
+
                 R.id.nav_profile -> {
                     Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
                 }

@@ -12,4 +12,5 @@
     <color name="card_bg">#FFFFFF</color>
     <color name="text_primary">#222222</color>
     <color name="green_bg">#4CAF50</color>
+    <color name="light_blue">#ADD8E6</color>
 </resources>
