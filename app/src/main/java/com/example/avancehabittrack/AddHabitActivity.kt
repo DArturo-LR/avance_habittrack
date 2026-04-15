@@ -5,13 +5,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class StatsActivity : AppCompatActivity() {
+class AddHabitActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_stats)
+        setContentView(R.layout.activity_add_habit)
 
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-        bottomNav.selectedItemId = R.id.nav_stats
+        bottomNav.selectedItemId = R.id.nav_add
 
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -20,12 +20,12 @@ class StatsActivity : AppCompatActivity() {
                     finish()
                     true
                 }
-                R.id.nav_stats -> true
-                R.id.nav_add -> {
-                    startActivity(Intent(this, AddHabitActivity::class.java))
+                R.id.nav_stats -> {
+                    startActivity(Intent(this, StatsActivity::class.java))
                     finish()
                     true
                 }
+                R.id.nav_add -> true
                 R.id.nav_reminders -> {
                     startActivity(Intent(this, RemindersActivity::class.java))
                     finish()
