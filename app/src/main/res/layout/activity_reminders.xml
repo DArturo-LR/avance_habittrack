@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_teal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recordatorios"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:padding="24dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#F0F4F4"
+                app:cardCornerRadius="15dp"
+                android:layout_marginBottom="12dp">
+                <LinearLayout android:padding="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/txtHabit" android:text="Leer" android:textStyle="bold" android:textSize="18sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <TextView android:layout_below="@id/txtHabit" android:text="08:00 AM" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                        <Switch android:layout_alignParentRight="true" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"/>
+                    </RelativeLayout>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                        <TextView android:text="L" android:layout_width="25dp" android:layout_height="25dp" android:gravity="center" android:background="@color/primary_teal" android:textColor="@color/white" android:layout_marginRight="4dp"/>
+                        <TextView android:text="M" android:layout_width="25dp" android:layout_height="25dp" android:gravity="center" android:background="@color/card_gray" android:layout_marginRight="4dp"/>
+                        <TextView android:text="X" android:layout_width="25dp" android:layout_height="25dp" android:gravity="center" android:background="@color/primary_teal" android:textColor="@color/white"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Añadir Recordatorio"
+                android:backgroundTint="@color/primary_teal"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:menu="@menu/bottom_menu" />
+</LinearLayout>
